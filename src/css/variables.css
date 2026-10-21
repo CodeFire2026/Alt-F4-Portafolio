@@ -1,0 +1,25 @@
+:root {
+	--bg-color: #ffffff;
+	--card-color: #e3e3e379;
+	--text-color: #111111;
+    --text-outline: #ffffff9a;
+	--header-color: #e9e9e9;
+
+    --nav-button-color: #f4f5f5;
+    --nav-button-color2: #f8f8f826;
+    --nav-button-color-hover: #ebebeb;
+    --nav-button-color-hover2: #dee9f3;
+	
+    --red: #ff283ecc;
+	--blue: #2870ffcc;
+
+	--testcolor: rgb(191, 2, 191);
+}
+
+[data-theme="dark"] {
+	--bg-color: #1e1d1d;
+	--text-color: #ffffff;
+	--header-color: #4b4b4b;
+
+	--testcolor: rgb(255, 85, 255);
+}

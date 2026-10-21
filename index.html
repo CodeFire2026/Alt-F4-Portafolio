@@ -1,0 +1,53 @@
+<!-- biome-ignore-all lint/a11y/useAltText: <> -->
+<!-- biome-ignore-all lint/a11y/useValidAnchor: <> -->
+<!-- biome-ignore-all lint/a11y/useIframeTitle: <> -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio ALT+F4</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets (el orden importa!) -->
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/nav-button.css">
+    <link rel="stylesheet" href="src/css/menu.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img class="logo" src="https://lh3.googleusercontent.com/d/1T5DNq83EtiyO-pnfdi7sUYDaHCm7tFEG=s220">
+            <h1 class="nombre-grupo">Alt+F4</h1>
+        </a>
+        <nav class="head-nav-container" id="menu-card">
+            <div class="button-wrapper">
+                <a class="shine-button button-chrome" href="#">Sobre nosotros</a>
+            </div>
+            <div class="button-wrapper">
+                <a class="shine-button button-chrome" href="#">Proyectos</a>
+            </div>
+            <div class="button-wrapper">
+                <a class="shine-button button-chrome" href="#">Contactos</a>
+            </div>
+        </nav>
+        <button class="menu-trigger" id="menu02" type="button" aria-expanded="false" aria-controls="menu-card">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <script src="src/js/menu-toggle.js"></script>
+</body>
+
+</html>

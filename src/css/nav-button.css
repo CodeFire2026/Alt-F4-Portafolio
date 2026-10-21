@@ -1,0 +1,118 @@
+.button-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.shine-button {
+	position: relative;
+	padding: 0.6rem 0.7rem;
+	font-size: 1rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	letter-spacing: 0.5px;
+	min-width: 100px;
+}
+
+.shine-button::before {
+	content: "";
+	position: absolute;
+	height: 250%;
+	width: 40px;
+	top: 0;
+	left: -60px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.5),
+		transparent
+	);
+	transform: rotate(45deg) translateY(-35%);
+	animation: shine 10s ease infinite;
+}
+
+@keyframes shine {
+	0% {
+		left: -80px;
+	}
+	40%,
+	100% {
+		left: calc(100% + 20px);
+	}
+}
+
+.button-chrome {
+	background: linear-gradient(
+		135deg,
+		var(--nav-button-color) 0%,
+		var(--nav-button-color2) 100%
+	);
+	color: var(--text-color);
+	font-weight: bold;
+	text-align: center;
+	box-shadow:
+		0 3px 5px rgba(31, 102, 177, 0.15),
+		inset 0 1px 0 rgb(229, 229, 229);
+	/* inset 0 -1px 0 rgba(0, 0, 0, 0.1); */
+}
+
+.button-chrome:hover {
+	background: linear-gradient(
+		180deg,
+		var(--nav-button-color-hover) 0%,
+		var(--nav-button-color-hover2) 100%
+	);
+	transform: translateY(-3px);
+
+	box-shadow:
+		0 3px 16px rgba(45, 62, 80, 0.15),
+		inset 0 1px 0 rgba(58, 58, 58, 0.2),
+		inset 0 -1px 0 rgba(58, 58, 58, 0.2);
+}
+
+.shine-button:active {
+	transform: translateY(1px);
+	transition: transform 0.1s ease;
+}
+
+@media (max-width: 768px) {
+	/* Card under the menu */
+	.head-nav-container {
+		position: absolute;
+		top: calc(100% - 12px); /* a little gap below the button */
+		right: 0; /* aligned to the right edge of the button */
+		min-width: 150px;
+		padding-inline: 0.5rem;
+		padding-block: 1rem;
+		display: flex;
+		flex-direction: column;
+
+		background: var(--card-color);
+		border: 2px solid rgba(255, 255, 255, 0.25);
+		border-radius: 12px;
+		box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(8px);
+
+		/* hidden by default, with a small slide/fade animation */
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-8px);
+		transition:
+			opacity 0.2s,
+			transform 0.2s,
+			visibility 0.2s;
+		z-index: 10;
+	}
+
+	.head-nav-container.open {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+}
