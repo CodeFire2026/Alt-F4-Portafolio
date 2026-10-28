@@ -73,9 +73,15 @@
 	transform: translate(-3px, -11px) rotate(45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	#menu02,
 	#menu02 span {
 		display: inline-block;
+	}
+}
+
+@media (max-width: 425px) {
+	#menu02{
+		transform: scale(0.7);
 	}
 }

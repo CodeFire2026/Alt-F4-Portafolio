@@ -2,18 +2,23 @@
 	--bg-color: #ffffff;
 	--card-color: #e3e3e379;
 	--text-color: #111111;
-    --text-outline: #ffffff9a;
+	--text-outline: #ffffff9a;
 	--header-color: #e9e9e9;
+	--main-box-shadow-color: #e9e8e8; 
 
-    --nav-button-color: #f4f5f5;
-    --nav-button-color2: #f8f8f826;
-    --nav-button-color-hover: #ebebeb;
-    --nav-button-color-hover2: #dee9f3;
+	--nav-button-color: #f4f5f5;
+	--nav-button-color2: #f8f8f826;
+	--nav-button-color-hover: #ebebeb;
+	--nav-button-color-hover2: #dee9f3;
 	--theme-toggle-background: #fdfdfd85;
 	--theme-toggle-background-hover: rgba(225, 225, 225, 0.616);
 	--theme-toggle-border: rgba(95, 95, 95, 0.25);
-	
-    --red: #ff061f;
+
+	--section-header-shadow1: #57131362;
+	--section-header-shadow2: #15295161;
+	--section-img-shadow: #232323c9; 
+
+	--red: #ff061f;
 	--blue: #0456fa;
 
 	--testcolor: rgb(191, 2, 191);
@@ -25,15 +30,20 @@
 	--text-color: #ffffff;
 	--text-outline: #b6b6b69a;
 	--header-color: #4b4b4b;
+	--main-box-shadow-color: rgb(35, 35, 35); 
 
 	--nav-button-color: #3a3a3a26;
-    --nav-button-color2: #464646;
-    --nav-button-color-hover: #7f7f7fad;
-    --nav-button-color-hover2: #9a9a9ab0;
+	--nav-button-color2: #464646;
+	--nav-button-color-hover: #7f7f7fad;
+	--nav-button-color-hover2: #9a9a9ab0;
 	--theme-toggle-background: #3f3f3fb2;
 	--theme-toggle-background-hover: rgba(205, 205, 205, 0.329);
 	--theme-toggle-border: rgba(193, 193, 193, 0.25);
-	
+
+	--section-header-shadow1: #b34d4d9c;
+	--section-header-shadow2: #4869aaa0;
+	--section-img-shadow: #adadad5e; 
+
 	--red: #ff283ecc;
 	--blue: #2870ffcc;
 

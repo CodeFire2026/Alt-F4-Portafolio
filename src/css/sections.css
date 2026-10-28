@@ -1,0 +1,49 @@
+article {
+	height: 100%;
+    padding-block: 1.5rem;
+	border: 2px groove var(--card-color);
+	border-radius: 36px;
+	box-shadow: 0 0 48px 12px var(--main-box-shadow-color);
+	h2 {
+		display: inline-block;
+		text-align: center;
+		font-family: "Stardos Stencil", system-ui;
+		font-weight: 700;
+		font-size: 1.75rem;
+		padding: 0;
+		margin: 0;
+		text-shadow:
+			0 0 5px var(--section-header-shadow1),
+			0 0 18px var(--section-header-shadow2);
+	}
+	transition:
+		text-shadow 0.4s ease,
+		box-shadow 0.4s ease;
+}
+
+.sobre-nosotros-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.team-description {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-inline: auto;
+	padding-inline: clamp(0rem, calc(20vw - 3.5rem), 15rem);
+	h3 {
+		font-family: "Neuton", serif;
+		font-weight: 700;
+		font-size: 1.5rem;
+		margin: 0;
+	}
+
+	p {
+		font-family: "Roboto Slab", serif;
+		text-align: justify;
+		font-size: clamp(0.8rem, 1vw, 1.5rem);
+		margin: 0;
+	}
+}

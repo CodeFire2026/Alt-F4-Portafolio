@@ -80,7 +80,7 @@
 	transition: transform 0.1s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	/* Card under the menu */
 	.head-nav-container {
 		position: absolute;

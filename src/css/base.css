@@ -1,8 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	min-height: 100vh;
-	overflow: hidden;
+	height: 100%;
 
 	background-color: var(--bg-color);
 	color: var(--text-color);
@@ -18,21 +17,19 @@ body {
 
 header {
 	position: relative;
-	isolation: isolate; /* keeps the background layers behind the content */
+	isolation: isolate;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 2rem;
-	/* background-color: var(--header-color); */
 
-	/* Sharp gradient line */
 	border-bottom: 2px solid;
 	border-image: linear-gradient(to right, var(--red), var(--blue)) 1;
 
 	height: 110px;
 }
 
-/* Background: red to blue left/right, fading to transparent top/bottom */
+/* Background */
 header::before {
 	content: "";
 	position: absolute;
@@ -40,11 +37,11 @@ header::before {
 	z-index: -1;
 	background: linear-gradient(to right, var(--red), var(--blue));
 	opacity: 0.15;
-	-webkit-mask-image: linear-gradient(to top, #000 40%, transparent 90%);
-	mask-image: linear-gradient(to top, #000 40%, transparent 90%);
+	-webkit-mask-image: linear-gradient(to top, #000 20%, transparent 90%);
+	mask-image: linear-gradient(to top, #000 20%, transparent 90%);
 }
 
-/* Glow: a blurred copy of the border line */
+/* Glow */
 header::after {
 	content: "";
 	position: absolute;
@@ -63,8 +60,7 @@ header::after {
 	align-items: center;
 	justify-content: center;
 	gap: 1.5rem;
-	/* color: inherit; */
-	text-decoration: none; /* Removes the default underline */
+	text-decoration: none;
 }
 
 .logo {
@@ -79,12 +75,12 @@ header::after {
 	font-style: normal;
 
 	/* La outline en si */
-	-webkit-text-stroke: 2px #dc5b5b81;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #dc5b5b81;
 	-webkit-text-fill-color: var(--text-color);
 	paint-order: stroke fill;
-
-	/* Smooths out sharp text corners */
 	stroke-linejoin: round;
+	transition: -webkit-text-fill-color 0.3s ease;
 }
 
 .head-nav-container {
@@ -95,24 +91,37 @@ header::after {
 
 .head-nav-container a {
 	font-family: "Expletus Sans", sans-serif;
-	/* color: inherit; */
-	/* outline: 0; */
-	/* Prevent text from being selectable*/
+
 	-webkit-user-select: none; /* Safari */
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE/Edge */
 	user-select: none; /* Standard */
 
-	/* Change the cursor icon */
 	cursor: pointer;
 
-	/* Recommended resets for button-styled anchors */
 	display: inline-block;
 	text-decoration: none;
-	/* transition:
-		background-color 0.4s ease,
-		border-color 0.4s ease,
-		box-shadow 0.4s ease,
-		text-shadow 0.4s ease,
-		color 7s ease; */
+}
+
+main {
+	margin: 0;
+	padding-block: 3rem;
+	padding-inline: clamp(0rem, calc(10vw - 0.75rem), 7rem);
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+@media (max-width: 425px) {
+	.logo-container {
+		gap: 0.5rem;
+	}
+
+	.logo {
+		height: 64px;
+		width: auto;
+	}
+
+	.nombre-grupo {
+		font-size: 1.5rem;
+	}
 }
