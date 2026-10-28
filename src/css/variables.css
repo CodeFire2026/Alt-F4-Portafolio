@@ -9,17 +9,33 @@
     --nav-button-color2: #f8f8f826;
     --nav-button-color-hover: #ebebeb;
     --nav-button-color-hover2: #dee9f3;
+	--theme-toggle-background: #fdfdfd85;
+	--theme-toggle-background-hover: rgba(225, 225, 225, 0.616);
+	--theme-toggle-border: rgba(95, 95, 95, 0.25);
 	
-    --red: #ff283ecc;
-	--blue: #2870ffcc;
+    --red: #ff061f;
+	--blue: #0456fa;
 
 	--testcolor: rgb(191, 2, 191);
 }
 
 [data-theme="dark"] {
 	--bg-color: #1e1d1d;
+	--card-color: #2b2b2b79;
 	--text-color: #ffffff;
+	--text-outline: #b6b6b69a;
 	--header-color: #4b4b4b;
+
+	--nav-button-color: #3a3a3a26;
+    --nav-button-color2: #464646;
+    --nav-button-color-hover: #7f7f7fad;
+    --nav-button-color-hover2: #9a9a9ab0;
+	--theme-toggle-background: #3f3f3fb2;
+	--theme-toggle-background-hover: rgba(205, 205, 205, 0.329);
+	--theme-toggle-border: rgba(193, 193, 193, 0.25);
+	
+	--red: #ff283ecc;
+	--blue: #2870ffcc;
 
 	--testcolor: rgb(255, 85, 255);
 }

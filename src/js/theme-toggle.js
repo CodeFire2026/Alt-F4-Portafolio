@@ -1,21 +1,22 @@
 // THEME TOGGLE --------------------------------------------------------------------------------------
-const themeToggle = document.querySelector("#theme-toggle");
-const thumbIcon = document.querySelector(".thumb-icon");
+const themeBtn = document.querySelector("[data-theme-toggle]");
+const root = document.documentElement;
 
-function updateThemeIcon() {
-	const theme = document.documentElement.dataset.theme;
-
-	thumbIcon.textContent = theme === "dark" ? "☾" : "☀";
+function applyTheme(theme) {
+	root.dataset.theme = theme;
+	themeBtn.setAttribute(
+		"aria-label",
+		theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+	);
 }
 
-updateThemeIcon();
+// Initial theme: saved choice first, then the system preference
+const savedTheme = localStorage.getItem("theme");
+const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+applyTheme(savedTheme ?? (systemPrefersDark ? "dark" : "light"));
 
-themeToggle.addEventListener("click", () => {
-	const currentTheme = document.documentElement.dataset.theme;
-	const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-	document.documentElement.dataset.theme = newTheme;
+themeBtn.addEventListener("click", () => {
+	const newTheme = root.dataset.theme === "dark" ? "light" : "dark";
+	applyTheme(newTheme);
 	localStorage.setItem("theme", newTheme);
-
-	updateThemeIcon();
 });

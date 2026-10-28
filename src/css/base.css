@@ -11,6 +11,8 @@ body {
 		border-color 0.4s ease,
 		box-shadow 0.4s ease,
 		text-shadow 0.4s ease,
+		webkit-text-stroke 5s ease,
+		webkit-text-fill-color 5s ease,
 		color 0.4s ease;
 }
 
@@ -38,8 +40,8 @@ header::before {
 	z-index: -1;
 	background: linear-gradient(to right, var(--red), var(--blue));
 	opacity: 0.15;
-	/* -webkit-mask-image: linear-gradient(to top, #000000, transparent);
-	mask-image: linear-gradient(to top, #000, transparent); */
+	-webkit-mask-image: linear-gradient(to top, #000 40%, transparent 90%);
+	mask-image: linear-gradient(to top, #000 40%, transparent 90%);
 }
 
 /* Glow: a blurred copy of the border line */
@@ -61,7 +63,7 @@ header::after {
 	align-items: center;
 	justify-content: center;
 	gap: 1.5rem;
-	color: inherit; /* Inherits the text color of the parent element */
+	/* color: inherit; */
 	text-decoration: none; /* Removes the default underline */
 }
 
@@ -93,7 +95,7 @@ header::after {
 
 .head-nav-container a {
 	font-family: "Expletus Sans", sans-serif;
-	color: inherit;
+	/* color: inherit; */
 	/* outline: 0; */
 	/* Prevent text from being selectable*/
 	-webkit-user-select: none; /* Safari */
@@ -107,4 +109,10 @@ header::after {
 	/* Recommended resets for button-styled anchors */
 	display: inline-block;
 	text-decoration: none;
+	/* transition:
+		background-color 0.4s ease,
+		border-color 0.4s ease,
+		box-shadow 0.4s ease,
+		text-shadow 0.4s ease,
+		color 7s ease; */
 }
