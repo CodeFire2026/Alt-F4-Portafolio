@@ -111,6 +111,15 @@ main {
 	overflow: hidden;
 }
 
+.section-separator {
+	width: clamp(10%, calc(75vw - 0.2rem), 75%);
+	margin-block: 3.5rem;
+	border: none;
+	height: 2px;
+	background-color: var(--text-outline);
+	opacity: 50%;
+}
+
 @media (max-width: 425px) {
 	.logo-container {
 		gap: 0.5rem;
