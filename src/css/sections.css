@@ -124,7 +124,7 @@ article {
 	}
 
 	p {
-		font-size: clamp(14px, 1cqw, 18px);
+		font-size: clamp(13.5px, 3cqw, 15px);
 		word-break: break-word;
 		margin: 0;
 	}
@@ -254,6 +254,11 @@ article {
 		word-break: break-word;
 		margin: 0;
 	}
+}
+
+#contacto {
+	text-align: center;
+	font-family: "Noto Serif Todhri", serif;
 }
 
 @media (max-width: 900px) {

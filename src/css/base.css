@@ -120,6 +120,58 @@ main {
 	opacity: 50%;
 }
 
+footer {
+	position: relative;
+	isolation: isolate;
+	display: flex;
+	justify-content: center;
+	padding: 0 2rem;
+
+	border-top: 2px solid;
+	border-image: linear-gradient(to right, var(--red), var(--blue)) 1;
+
+	height: 110px;
+}
+
+/* Background */
+footer::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(to right, var(--red), var(--blue));
+	opacity: 0.15;
+	-webkit-mask-image: linear-gradient(to bottom, #000 20%, transparent 90%);
+	mask-image: linear-gradient(to bottom, #000 20%, transparent 90%);
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	
+	text-align: center;
+	justify-content: center;
+	/* align-content: center; */
+
+	p {
+		margin: 0.3rem;
+	}
+}
+
+/* Glow */
+footer::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -4px;
+	height: 8px;
+	z-index: -1;
+	background: linear-gradient(to right, var(--red), var(--blue));
+	filter: blur(8px);
+	opacity: 0.9;
+}
+
 @media (max-width: 425px) {
 	.logo-container {
 		gap: 0.5rem;
