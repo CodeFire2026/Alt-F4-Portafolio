@@ -47,7 +47,7 @@ document.addEventListener("keydown", (e) => {
 // 	}, 100);
 // });
 
-const mq = window.matchMedia("(max-width: 900px)");
+const mq = window.matchMedia("(max-width: 1000px)");
 
 mq.addEventListener("change", () => {
 	card.style.transition = "none";
