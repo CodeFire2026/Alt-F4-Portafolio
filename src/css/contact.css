@@ -1,0 +1,26 @@
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin-inline: auto;
+    margin-top: 1.5rem;
+    padding-inline: 1rem;
+}
+
+.contacto-item-texto p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contacto-item-texto a {
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 1px;
+    transition: opacity 0.2s ease;
+}
+
+.contacto-item-texto a:hover {
+    opacity: 0.65;
+}
