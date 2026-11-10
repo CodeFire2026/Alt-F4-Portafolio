@@ -42,4 +42,5 @@ showcase.addEventListener("keydown", (e) => {
 	if (e.key === "ArrowRight") showSlide(current + 1);
 });
 
+console.log("Ur awesome :)")
 showSlide(0);
